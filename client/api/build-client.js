@@ -4,6 +4,7 @@ export default ({ req }) => {
 
   if (typeof window === 'undefined') {
     // We are on the server
+    window.setTimeout(0)
     return axios.create({
       baseURL: 'https://www.zhuominginfo.org/',
       headers: req.headers
