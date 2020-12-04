@@ -2,8 +2,8 @@ import axios from 'axios';
 
 export default ({ req }) => {
 
-  req.setTimeout(0);
-  
+  req.setTimeout(100000);
+
   if (typeof window === 'undefined') {
     // We are on the server
     console.log(req.headers)
