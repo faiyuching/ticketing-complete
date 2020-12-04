@@ -8,8 +8,9 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
   tls:
-    - host: www.zhuominginfo.org
-      secretName: echo-tls
+  - hosts:
+    - www.zhuominginfo.org
+    secretName: echo-tls
   rules:
     - host: www.zhuominginfo.org
       http:
