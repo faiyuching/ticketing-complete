@@ -3,7 +3,7 @@ import axios from 'axios';
 export default ({ req }) => {
   if (typeof window === 'undefined') {
     // We are on the server
-
+    console.log(req.headers)
     return axios.create({
       baseURL: 'http://www.zhuominginfo.org/',
       headers: req.headers
