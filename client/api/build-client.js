@@ -2,11 +2,8 @@ import axios from 'axios';
 
 export default ({ req }) => {
 
-  req.setTimeout(100000);
-
   if (typeof window === 'undefined') {
     // We are on the server
-    console.log(req.headers)
     return axios.create({
       baseURL: 'https://www.zhuominginfo.org/',
       headers: req.headers
