@@ -51,7 +51,10 @@ const start = async () => {
   app.listen(3000, () => {
     console.log('Listening on port 3000!!!!!!!!');
   });
-
+  
+  app.on('connection', function (socket: any) {
+    socket.setTimeout(60 * 1000);
+  })
 };
 
 start();
